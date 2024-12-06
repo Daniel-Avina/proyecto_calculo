@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function generarTablaC(datos, tbodyId) {
       const tbody = document.getElementById(tbodyId);
-      tbody.innerHTML = `<tr> <td  colspan="5" class="res"> <h2>valor por descenso de gradiente: ${punto_c}</h2> </td> </tr>`; 
+      tbody.innerHTML = `<tr> <td  colspan="5" class="res"> <h2>valor por descenso de gradiente: ${datos[datos.length-1].x_k1.toFixed(7)}</h2> </td> </tr>`; 
       datos.forEach((dato, index) => {
         let row = document.createElement('tr');
         row.innerHTML = `
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function generarTablaB(datos, tbodyId) {
       const tbody = document.getElementById(tbodyId);
-      tbody.innerHTML = `<tr> <td  colspan="5" class="res"> <h2>valor por descenso de gradiente: ${punto_b}</h2> </td> </tr>`; 
+      tbody.innerHTML = `<tr> <td  colspan="5" class="res"> <h2>valor por descenso de gradiente: ${datos[datos.length-1].x_k1.toFixed(7)}</h2> </td> </tr>`; 
       datos.forEach(dato => {
           let row = document.createElement('tr');
           row.innerHTML = `
