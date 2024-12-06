@@ -15,7 +15,8 @@ function p(x) {
   return 550 - x / 10;
 }
 
-// funcion para calcular el descuento, se usa para obtener los resultados b) y c) sustituyendo x por el punto maximo que obtenemos por descenso de gradiente
+// funcion para calcular el descuento, se usa para obtener los resultados b) y c) 
+// sustituyendo x por el punto maximo que obtenemos por descenso de gradiente
 function descuento(x){
   return 450 - p(x) ;
   // return (450 - p(x) ) / 100;
@@ -130,6 +131,8 @@ punto_b=x_k
 console.table(tabla_b)
 console.log(`b) MAX en ${punto_b.toFixed(3)} es ${R(punto_b).toFixed(5)}`)
 
+let respuesta_b = descuento(punto_b) // respuesta de b) descuento en el punto maximo 
+
 // "c) maximizar sus ganancias"
 // sabemos que el Maximo es en (2000, 332000) por lo que nos debe de dar un valor cercano a 2000
 
@@ -150,6 +153,8 @@ for (let i = 0; i < 300; i++) {
 punto_c=x_k
 console.table(tabla_c)
 console.log(`b) MAX en ${punto_c.toFixed(5)} es ${U(punto_c)}`)
+
+let respuesta_c = descuento(punto_c) // tamaño de la caja para maximizar las ganancias
 
 // aqui termina el codigo de descenso de gradiente
 
