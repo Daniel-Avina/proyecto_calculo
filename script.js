@@ -162,8 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const c_resp = document.getElementById('c_resp');
 
   // mostrar los resultados en el DOM
-  b_resp.textContent = `Resultado final: ${tabla_b[tabla_b.length - 1].x_k1.toFixed(8)}`;
-  c_resp.textContent = `Resultado final: ${tabla_c[tabla_c.length - 1].x_k1.toFixed(8)}`;
+  b_resp.textContent = `MAX en ${punto_b.toFixed(3)} es ${R(punto_b).toFixed(5)}`;
+  c_resp.textContent = `MAX en ${punto_c.toFixed(3)} es ${U(punto_c).toFixed(5)}`;
 
   // generar la tabla HTML
   function generarTabla(datos, tbodyId) {
