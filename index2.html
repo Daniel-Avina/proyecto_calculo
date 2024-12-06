@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimización del Fabricante</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Optimización de Ganancias</h1>
+  </header>
+  
+  <section>
+    <h2>Resultados Finales</h2>
+    <p id="result-a">a) Función de demanda: \( p(x) = 550 - \frac{x}{10} \)</p>
+    <p id="result-b">b) Descuento para maximizar ingresos: $175</p>
+    <p id="result-c">c) Descuento para maximizar ganancias: $100</p>
+  </section>
+  
+  <section>
+    <h2>Resultados Iterativos</h2>
+    <table>
+      <thead>
+        <!tr>
+          <th>Iteración (k)</th>
+          <th>\( X_k \)</th>
+          <th>\( f'(X_k) \)</th>
+          <th>α (Learning Rate)</th>
+          <th>\( X_{k+1} \)</th>
+        </tr>
+      </thead>
+      <tbody id="results-table">
+        <!-- Resultados iterativos aquí -->
+      </tbody>
+    </table>
+  </section>
+  
+
+  <section>
+    <h2>Gráfica</h2>
+    <canvas id="chart" width="800" height="400"></canvas>
+  </section>
+</body>
+</html>

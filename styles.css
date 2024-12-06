@@ -1,0 +1,262 @@
+/* 
+LEONARDO DANIEL AVIÑA NERI
+email 1: daniel.avina.neri@gmail.com
+email 2: ld.avinaneri@ugto.mx
+github: https://github.com/Daniel-Avina
+*/
+*{
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+    font-family: 'Nova Slim', cursive;
+    /* font-family: 'Fira Code', monospace; */
+    /* font-family: 'Kdam Thmor Pro', sans-serif; */
+    /* font-family: 'Signika Negative', sans-serif; */
+    /* font-family: 'Alkatra', cursive; */
+}
+
+h1, h2, h3, h4, h5, h6{    
+    font-family: 'Nova Slim', cursive;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #05002c;
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.558);
+    /* box-shadow: 0 5px 10px -3px rgba(255, 224, 45, 0.3); */
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 70px;
+}
+
+
+body{
+    background-position: center;
+    background: rgb(20, 45, 83);
+    background: radial-gradient(circle, rgb(20, 45, 83) 30%, rgba(12,12,12,1) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    min-height: 100vh; /*sin este no funciona todo esto*/
+    grid-template-rows: auto 1fr auto;
+}
+
+
+main {
+    margin-top: 130px;
+    margin: 30px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #05002c;
+    box-shadow: 0 5px 10px -3px rgba(255, 223, 0, 0.8);
+    min-height: 70px;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-content: space-between;
+    /* background-color: #fff; */
+    /* width: 50%; */
+}
+
+li{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #05002c;
+    border: 2px solid white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.boton{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #05002c;
+    border: 2px solid white;
+    cursor: pointer;
+    text-align: center;
+}
+
+li:hover, .boton:hover {
+    box-shadow: 0px 0px 18px rgba(255, 224, 45, 0.3);
+    transform: scale(1.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#iterativo, #analitico, #codigo,#play{
+    margin-top: 180px;
+    /* background-color: #fff; */
+    width: 100%;
+}
+
+#tabla-c{
+    margin-top: 100px;
+}
+
+.formula{
+    color: rgb(193, 193, 3);
+    font-size: 1.2em;
+}
+
+form#calculo-form {
+    background-color: #05002c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 0 auto;
+    color: white;
+}
+
+#calculo-form{
+    margin-top: 40px;
+}
+
+form#calculo-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+form#calculo-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+}
+
+form#calculo-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3e79c6;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+form#calculo-form button:hover {
+    background-color: #1964af;
+}
+
+code {
+    background-color: #04002166;
+    color: #dcdcdc;
+    font-family: 'Consolas', 'Courier New', monospace;
+    /* font-family: 'FiraCode Nerd Font Mono'; */
+    padding: 6px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 1.4em;
+}
+
+table{
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+    /* border: 2px solid rgb(7, 0, 106); */
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+td{
+    border: 2px solid black;
+    /* border-radius: 20px; */
+}
+tr:nth-child(odd) {
+    background-color: #3e79c6;
+}
+
+tr:nth-child(even) {
+    background-color: #1964af;
+}
+
+th, thead{
+    border: 2px solid black;
+    /* border-radius: 20px; */
+    color: #fff;
+    background-color: #05002c;
+}
+
+tbody{
+    border: 2px solid black;
+    border-radius: 20px;
+}
+caption{
+    font-size: 2em;
+}
+
+
+
+@media (max-width: 768px) {
+
+    main{
+        margin: 10px;
+    }
+
+    header, footer {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.1em;
+    }
+
+    header ul {
+        width: 90%;
+        align-content: space-between;
+        font-size: 0.8em;
+    }
+
+    header li {
+        padding: 6px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer li {
+        width: 100%;
+    }
+
+    li {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
