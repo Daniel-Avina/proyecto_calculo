@@ -27,12 +27,12 @@ function descuento(x){
       I(x) = p(x) * x
       I(x) = (550 - x/10) * x
       I(x) = 550x - x^2/10
-      R'(x) = 550 - x/5
+      I'(x) = 550 - x/5
       0 = 550 - x/5
       x = 2750 -> punto critico
 
-      R''(x) = -1/5
-      R''(2750) = -1/5 -> negativo -> maximo
+      I''(x) = -1/5
+      I''(2750) = -1/5 -> negativo -> maximo
       p(2750) = 550 - 2750/10 = 275
 
       I(2750) = 275 * 2750 = 756250
@@ -102,7 +102,7 @@ function G_pp() {
 
 // clase para almacenar los datos de la tabla
 class Tabla {
-  constructoI(i, x_k, f_p, a, x_k1) {
+  constructor(i, x_k, f_p, a, x_k1) {
       this.i = i;
       this.x_k = x_k;
       this.f_p = f_p;
@@ -121,8 +121,8 @@ let punto_b // punto maximo de b)
 // "b) maximizar funcion de ingreso"
 // sabemos que el Maximo es en (2750, 756250) por lo que nos debe de dar un valor cercano a 2750
 for (let i = 0; i < 170; i++) {
-  x_k1=x_k + a * R_p(x_k);
-  tabla_b[i]=new Tabla(i, x_k, R_p(x_k), a, x_k1);
+  x_k1=x_k + a * I_p(x_k);
+  tabla_b[i]=new Tabla(i, x_k, I_p(x_k), a, x_k1);
   x_k=x_k1;
 }
 
@@ -161,7 +161,7 @@ let respuesta_c = descuento(punto_c) // tamaño de la caja para maximizar las ga
 // ---------------------------------------------------------
 // generar la tabla HTML
 
-document.addEventListeneI('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
   // obtener elementos del DOM para mostrar los resultados
   const b_resp = document.getElementById('b_resp');
