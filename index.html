@@ -169,7 +169,7 @@ github: https://github.com/Daniel-Avina
 <!-- b -->
   <label for=""><h2><center>b) maximizar funcion de ingreso</center></h3></label>
     <label for="learning-rate_b">Learning Rate (a) para b):</label>
-    <input type="number" id="learning-rate_b" name="learning-rate_b" step="0.1" required>
+    <input type="number" id="learning-rate_b" name="learning-rate_b" step="0.0001" required>
     <br>
     <label for="iterations_b">Número de Iteraciones para b):</label>
     <input type="number" id="iterations_b" name="iterations_b" value="10" required>
@@ -178,7 +178,7 @@ github: https://github.com/Daniel-Avina
       <!-- c -->
       <label for=""><h2><center>c) maximizar sus ganancias</center></h3></label>
       <label for="learning-rate">Learning Rate (a) para c):</label>
-      <input type="number" id="learning-rate" name="learning-rate" step="0.1" required>
+      <input type="number" id="learning-rate" name="learning-rate" step="0.0001" required>
       <br>
       <label for="iterations">Número de Iteraciones para c):</label>
       <input type="number" id="iterations" name="iterations" value="10" required>
@@ -246,22 +246,22 @@ github: https://github.com/Daniel-Avina
         .replace(/console.log/g, '<span style="color: #ec2db6;">console.log</span>')
         .replace(/constructor/g, '<span style="color: #ec2db6;">constructor</span>')
         .replace(/\/\*[\s\S]*?\*\//g, '<span style="color: green;">$&</span>')
-        .replace(/R_p\(x\)/g, '<span style="color: #ec2db6;">R_p(x)</span>')
-        .replace(/U\(x\)/g, '<span style="color: #ec2db6;">U(x)</span>')
+        .replace(/R_p\(x\)/g, '<span style="color: #ec2db6;">I_p(x)</span>')
+        .replace(/U\(x\)/g, '<span style="color: #ec2db6;">G(x)</span>')
         .replace(/C\(x\)/g, '<span style="color: #ec2db6;">C(x)</span>')
-        .replace(/U_p\(x\)/g, '<span style="color: #ec2db6;">U_p(x)</span>')
-        .replace(/U_pp\(\)/g, '<span style="color: #ec2db6;">U_pp()</span>')
-        .replace(/R_pp\(\)/g, '<span style="color: #ec2db6;">R_pp(x)</span>')
-        .replace(/R\(x\)/g, '<span style="color: #ec2db6;">R(x)</span>')
+        .replace(/G_p\(x\)/g, '<span style="color: #ec2db6;">G_p(x)</span>')
+        .replace(/G_pp\(\)/g, '<span style="color: #ec2db6;">G_pp()</span>')
+        .replace(/R_pp\(\)/g, '<span style="color: #ec2db6;">I_pp(x)</span>')
+        .replace(/R\(x\)/g, '<span style="color: #ec2db6;">I(x)</span>')
         .replace(/p\(x\)/g, '<span style="color: #ec2db6;">p(x)</span>')
         // .replace(/x/g, '<span style="color: #b22222;">x</span>')
         .replace(/\{/g, '<span style="color: yellow;">{</span>')
         .replace(/\}/g, '<span style="color: yellow;">}</span>')
         .replace(/return/g, '<span style="color: coral;">return</span>')
         .replace(/C\(x\)/g, '<span style="color: #ec2db6;">C(x)</span>')
-        .replace(/U\(x\)/g, '<span style="color: #ec2db6;">U(x)</span>')
-        .replace(/U_p\(x\)/g, '<span style="color: #ec2db6;">U_p(x)</span>')
-        .replace(/U_pp\(x\)/g, '<span style="color: #ec2db6;">U_pp(x)</span>')
+        .replace(/U\(x\)/g, '<span style="color: #ec2db6;">G(x)</span>')
+        .replace(/G_p\(x\)/g, '<span style="color: #ec2db6;">G_p(x)</span>')
+        .replace(/G_pp\(x\)/g, '<span style="color: #ec2db6;">G_pp(x)</span>')
         .replace(/let/g, '<span style="color: coral;">let</span>')
         .replace(/const /g, '<span style="color: coral;">const</span>')
         .replace(/for /g, '<span style="color: coral;">for</span>')
