@@ -17,7 +17,8 @@ function p(x) {
 
 // funcion para calcular el descuento
 function descuento(x){
-  return (450 - p(x) ) / 100;
+  return 450 - p(x) ;
+  // return (450 - p(x) ) / 100;
 }
 
 /* b) maximizar funcion de ingreso
@@ -56,7 +57,7 @@ function R_pp() {
 }
 
 /*
-c) minimizar funcion de costo
+c) maximizar sus ganancias
 utilidad = ingreso - costo
 U(x) = R(x) - C(x)
 U(x) = (550 - x/10) * x - (68000 + 150x)
@@ -129,7 +130,7 @@ punto_b=x_k
 console.table(tabla_b)
 console.log(`b) MAX en ${punto_b.toFixed(3)} es ${R(punto_b).toFixed(5)}`)
 
-// "c) minimizar funcion de costo"
+// "c) maximizar sus ganancias"
 // sabemos que el Maximo es en (2000, 332000) por lo que nos debe de dar un valor cercano a 2000
 
 // VARIABLES PARA c)
@@ -162,11 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const c_resp = document.getElementById('c_resp');
 
   // mostrar los resultados en el DOM
-  b_resp.textContent = `b) ${ descuento(punto_b)*100 } \n\n
+  b_resp.textContent = `b) ${ descuento(punto_b) } \n\n
   MAX(${punto_b.toFixed(8)} , ${R(punto_b).toFixed(8)}) `;
   
 
-  c_resp.textContent = `\n\n
+  c_resp.textContent = `c) ${ descuento(punto_c) } \n\n
   MAX(${punto_c.toFixed(8)} , ${U(punto_c).toFixed(8)}) p()`;
 
   // generar la tabla HTML
