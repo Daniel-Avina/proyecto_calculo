@@ -162,8 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const c_resp = document.getElementById('c_resp');
 
   // mostrar los resultados en el DOM
-  b_resp.textContent = `MAX en ${punto_b.toFixed(3)} es ${R(punto_b).toFixed(5)}`;
-  c_resp.textContent = `MAX en ${punto_c.toFixed(3)} es ${U(punto_c).toFixed(5)}`;
+  b_resp.textContent = `b) ${ descuento(punto_b)*100 } \n\n
+  MAX(${punto_b.toFixed(8)} , ${R(punto_b).toFixed(8)}) `;
+  
+
+  c_resp.textContent = `\n\n
+  MAX(${punto_c.toFixed(8)} , ${U(punto_c).toFixed(8)}) p()`;
 
   // generar la tabla HTML
   function generarTabla(datos, tbodyId) {
