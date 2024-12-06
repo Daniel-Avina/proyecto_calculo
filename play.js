@@ -76,24 +76,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function generarTablaC(datos, tbodyId) {
-        const tbody = document.getElementById(tbodyId);
-        tbody.innerHTML = ''; // Clear existing rows
-        datos.forEach(dato => {
-            let row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${dato.i}</td>
-                <td>${dato.x_k.toFixed(4)}</td>
-                <td>${dato.f_p.toFixed(4)}</td>
-                <td>${dato.a}</td>
-                <td>${dato.x_k1.toFixed(7)}</td>
-            `;
-            tbody.appendChild(row);
-        });
+      const tbody = document.getElementById(tbodyId);
+      tbody.innerHTML = `<tr> <td  colspan="5" class="res"> <h2>valor por descenso de gradiente: ${punto_c}</h2> </td> </tr>`; 
+      datos.forEach((dato, index) => {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${dato.i}</td>
+          <td>${dato.x_k.toFixed(4)}</td>
+          <td>${dato.f_p.toFixed(4)}</td>
+          <td>${dato.a}</td>
+          <td>${dato.x_k1.toFixed(7)}</td>
+        `;
+        tbody.appendChild(row);
+      });
     }
+    
 
     function generarTablaB(datos, tbodyId) {
       const tbody = document.getElementById(tbodyId);
-      tbody.innerHTML = ''; // Clear existing rows
+      tbody.innerHTML = `<tr> <td  colspan="5" class="res"> <h2>valor por descenso de gradiente: ${punto_b}</h2> </td> </tr>`; 
       datos.forEach(dato => {
           let row = document.createElement('tr');
           row.innerHTML = `
