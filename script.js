@@ -174,8 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
   c_resp.textContent = `c) DESCUENTO( ${punto_c.toFixed(8)} ) = ${respuesta_c.toFixed(5)} `;
 
   // generar la tabla HTML
-  function generarTabla(datos, tbodyId) {
+  function generarTabla(datos, tbodyId, punto_N) {
       const tbody = document.getElementById(tbodyId);
+      tbody.innerHTML = `<tr> <td  colspan="5" class="res"> <h2>valor por descenso de gradiente: ${punto_N}</h2> </td> </tr>`; // Clear existing rows
+
       datos.forEach(dato => {
           let row = document.createElement('tr');
           row.innerHTML = `
@@ -190,8 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // generar y agregar la tabla para tabla_b
-  generarTabla(tabla_b, 'tbody_b');
+  generarTabla(tabla_b, 'tbody_b', punto_b);
 
   // generar y agregar la tabla para tabla_c
-  generarTabla(tabla_c, 'tbody_c');
+  generarTabla(tabla_c, 'tbody_c', punto_c);
 });
