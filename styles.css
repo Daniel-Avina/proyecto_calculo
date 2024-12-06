@@ -118,6 +118,7 @@ a{
     font-size: 1.2em;
 }
 
+
 form#calculo-form {
     background-color: #05002c;
     padding: 20px;
@@ -172,7 +173,7 @@ code {
     padding: 3px 4px;
     border-radius: 4px;
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 table{
