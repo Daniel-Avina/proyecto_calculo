@@ -113,7 +113,7 @@ github: https://github.com/Daniel-Avina
         </tr>
         <tr>
           <th>X<sub>0</sub></th>
-            <th>x_k</th>
+            <th>x <sub>k</sub></th>
             <th>f'(x <sub>k</sub> )</th>
             <th>a</th>
             <th>X<sub>k+1</sub></th>
@@ -141,7 +141,7 @@ github: https://github.com/Daniel-Avina
         </tr>
           <tr>
             <th>X<sub>0</sub></th>
-              <th>x_k</th>
+              <th>x <sub>k</sub></th>
               <th>f'(x <sub>k</sub> )</th>
               <th>a</th>
               <th>X<sub>k+1</sub></th>
@@ -169,7 +169,7 @@ github: https://github.com/Daniel-Avina
 <!-- b -->
   <label for=""><h2><center>b) maximizar funcion de ingreso</center></h3></label>
     <label for="learning-rate_b">Learning Rate (a) para b):</label>
-    <input type="number" id="learning-rate_b" name="learning-rate_b" step="0.0001" required>
+    <input type="number" id="learning-rate_b" name="learning-rate_b" min="0.0001" required>
     <br>
     <label for="iterations_b">Número de Iteraciones para b):</label>
     <input type="number" id="iterations_b" name="iterations_b" value="10" required>
@@ -178,7 +178,7 @@ github: https://github.com/Daniel-Avina
       <!-- c -->
       <label for=""><h2><center>c) maximizar sus ganancias</center></h3></label>
       <label for="learning-rate">Learning Rate (a) para c):</label>
-      <input type="number" id="learning-rate" name="learning-rate" step="0.0001" required>
+      <input type="number" id="learning-rate" name="learning-rate" min="0.0001" required>
       <br>
       <label for="iterations">Número de Iteraciones para c):</label>
       <input type="number" id="iterations" name="iterations" value="10" required>
@@ -199,7 +199,7 @@ github: https://github.com/Daniel-Avina
             </tr>
               <tr>
                 <th>X<sub>0</sub></th>
-                  <th>x_k</th>
+                  <th>x <sub>k</sub></th>
                   <th>f'(x <sub>k</sub> )</th>
                   <th>a</th>
                   <th>X<sub>k+1</sub></th>
@@ -219,7 +219,7 @@ github: https://github.com/Daniel-Avina
         </tr>
           <tr>
             <th>X<sub>0</sub></th>
-              <th>x_k</th>
+              <th>x <sub>k</sub></th>
               <th>f'(x <sub>k</sub> )</th>
               <th>a</th>
               <th>X<sub>k+1</sub></th>
@@ -234,6 +234,39 @@ github: https://github.com/Daniel-Avina
   <div id="codigo"><br></div>
   <div id="">
 <h2><br><br>CODIGO:<br></h2>
+
+  <h3>Funciones Matemáticas: </h2>
+    <ul>
+        <li><strong>p(x):</strong> Calcula el precio unitario en función de la cantidad x.</li>
+        <li><strong>I(x):</strong> Calcula el ingreso total multiplicando el precio unitario por la cantidad x.</li>
+        <li><strong>C(x):</strong> Calcula el costo total en función de la cantidad x.</li>
+        <li><strong>G(x):</strong> Calcula la ganancia total restando el costo total del ingreso total.</li>
+        <li><strong>I_p(x):</strong> Derivada de la función de ingreso, utilizada para encontrar el punto máximo de ingreso.</li>
+        <li><strong>G_p(x):</strong> Derivada de la función de ganancia, utilizada para encontrar el punto máximo de ganancia.</li>
+        <li><strong>descuento(x):</strong> Calcula un descuento basado en el precio unitario.</li>
+    </ul>
+
+    <br><br><br>
+    <h2>Clase Tabla</h2>
+    <p>Esta clase se utiliza para almacenar los datos de cada iteración del descenso de gradiente, incluyendo el índice de iteración, el valor actual de x, la derivada de la función, la tasa de aprendizaje (a), y el nuevo valor de x.</p>
+
+    <br><br><br>
+    <h2>Descenso de Gradiente</h2>
+    <p>El descenso de gradiente es un método iterativo utilizado para encontrar los puntos máximos o mínimos de una función. En este caso, se utiliza para maximizar el ingreso y la ganancia.</p>
+    <ul>
+        <li>Para maximizar el ingreso, se itera 170 veces ajustando x usando la derivada de la función de ingreso.</li>
+        <li>Para maximizar la ganancia, se itera 300 veces ajustando x usando la derivada de la función de ganancia.</li>
+    </ul>
+
+    <br><br><br>
+    <h2>Mostrar Resultados</h2>
+    <p>Una vez que se encuentran los puntos máximos, los resultados se muestran en la página web. Se generan tablas HTML para mostrar los datos de cada iteración del descenso de gradiente.</p>
+    
+    <br><br><br>
+    
+    <p>En resumen, este código realiza cálculos avanzados para maximizar el ingreso y la ganancia utilizando el método de descenso de gradiente y muestra los resultados en una página web de manera organizada.</p>
+
+
 <pre>
 <code>
   <script>
