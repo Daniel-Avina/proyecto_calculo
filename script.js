@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // generar la tabla HTML
   function generarTabla(datos, tbodyId, punto_N) {
       const tbody = document.getElementById(tbodyId);
-      tbody.innerHTML = `<tr> <td  colspan="5" class="res"> <h2>valor por descenso de gradiente: ${punto_N}</h2> </td> </tr>`; // Clear existing rows
+      tbody.innerHTML = `<tr> <td  colspan="5" class="res"> <h2>valor por descenso de gradiente: ${punto_N.toFixed(5)}</h2> </td> </tr>`; // Clear existing rows
 
       datos.forEach(dato => {
           let row = document.createElement('tr');
