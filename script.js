@@ -15,7 +15,7 @@ function p(x) {
   return 550 - x / 10;
 }
 
-// funcion para calcular el descuento
+// funcion para calcular el descuento, se usa para obtener los resultados b) y c) sustituyendo x por el punto maximo que obtenemos por descenso de gradiente
 function descuento(x){
   return 450 - p(x) ;
   // return (450 - p(x) ) / 100;
