@@ -163,12 +163,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const c_resp = document.getElementById('c_resp');
 
   // mostrar los resultados en el DOM
-  b_resp.textContent = `b) ${ descuento(punto_b) } \n\n
-  MAX(${punto_b.toFixed(8)} , ${R(punto_b).toFixed(8)}) `;
+  b_resp.textContent = `b) DESCUENTO( ${punto_b.toFixed(8)} ) = ${descuento(punto_b).toFixed(5)}) `;
   
 
-  c_resp.textContent = `c) ${ descuento(punto_c) } \n\n
-  MAX(${punto_c.toFixed(8)} , ${U(punto_c).toFixed(8)}) `;
+  c_resp.textContent = `c) DESCUENTO( ${punto_c.toFixed(8)} ) = ${descuento(punto_c).toFixed(5)}) `;
 
   // generar la tabla HTML
   function generarTabla(datos, tbodyId) {
