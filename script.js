@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   c_resp.textContent = `c) ${ descuento(punto_c) } \n\n
-  MAX(${punto_c.toFixed(8)} , ${U(punto_c).toFixed(8)}) p()`;
+  MAX(${punto_c.toFixed(8)} , ${U(punto_c).toFixed(8)}) `;
 
   // generar la tabla HTML
   function generarTabla(datos, tbodyId) {
