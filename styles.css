@@ -169,10 +169,10 @@ code {
     color: #dcdcdc;
     font-family: 'Consolas', 'Courier New', monospace;
     /* font-family: 'FiraCode Nerd Font Mono'; */
-    padding: 6px 8px;
+    padding: 3px 4px;
     border-radius: 4px;
     display: inline-block;
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
 
 table{
